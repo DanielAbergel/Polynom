@@ -3,7 +3,7 @@ public class test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//
+//meseege
 		Monom a =new Monom(2,3); ///build the monom 2*x^3.
 		System.out.println(a.toString());
 
