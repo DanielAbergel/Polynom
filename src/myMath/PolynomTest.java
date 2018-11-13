@@ -29,19 +29,26 @@ class PolynomTest {
 		actual_Polynom = new Polynom(test);
 		ans = actual_Polynom.equals(excepted_Polynom) ;
 		if(ans) fail("Not yet implemented");
-
-
-		fail("Not yet implemented");
 	}
 
 	@Test
 	void testPolynom() {
-//		fail("Not yet implemented");
+		actual_Polynom = new Polynom() ;
+		if(!actual_Polynom.isZero()) fail("Not yet implemented");
 	}
 
 	@Test
 	void testPolynomString() {
-//		fail("Not yet implemented");
+		String ValidInput = "2*x + 9*x^1/2x + 9*x^0 + 0/x^3 + 4*X^";
+		String[] ValidInputArray = ValidInput.split("/");
+		try {
+			for (int i = 0; i < ValidInputArray.length; i++) {
+				actual_Polynom = new Polynom(ValidInputArray[i]);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
