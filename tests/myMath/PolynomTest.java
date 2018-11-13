@@ -65,7 +65,13 @@ class PolynomTest {
 
 	@Test
 	void testF() {
-//		fail("Not yet implemented");
+		actual_Polynom = new Polynom(); 
+		actual_Polynom.add(new Monom(1,0));
+		if (actual_Polynom.f(22) != 1)  fail("Not yet implemented"); // test a number polynom (exsample y = 1 )
+		actual_Polynom.add(new Monom(1,3));
+		if (actual_Polynom.f(10) != 1001)  fail("Not yet implemented"); 
+		actual_Polynom = new Polynom(); 
+		if(actual_Polynom.f(3) != 0) fail("Not yet implemented"); // test zero polynom
 	}
 
 	@Test

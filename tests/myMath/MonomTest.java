@@ -158,5 +158,3 @@ class MonomTest extends Monom {
 	}
 
 }
-
-//testing
