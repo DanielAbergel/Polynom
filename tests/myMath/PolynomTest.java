@@ -39,7 +39,7 @@ class PolynomTest {
 
 	@Test
 	void testPolynomString() {
-		String ValidInput = "2*x + 9*x^1/2x + 9*x^0 + 0/x^3 + 4*X^";
+		String ValidInput = "2*x + 9*x^1/9*x + 9*x^0 + 0/x^3 + 4*X^-0 + 9*x^2/-3*x - 9*x - 4";
 		String[] ValidInputArray = ValidInput.split("/");
 		try {
 			for (int i = 0; i < ValidInputArray.length; i++) {
@@ -48,6 +48,18 @@ class PolynomTest {
 		} catch (Exception e) {
 			// TODO: handle exception
 			fail("Not yet implemented");
+		}
+	
+		String inValidInput = "2*x^-1 + 9*x^1/9*xx + 9*x^0 + 0/x^3 + 4*X^0 + 9*x^2 + a/-3*Xx - 9*x - 4";
+		String[] inValidInputArray = inValidInput.split("/");
+		try {
+			for (int i = 0; i < inValidInputArray.length; i++) {
+				actual_Polynom = new Polynom(inValidInputArray[i]);
+				fail("Not yet implemented");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			
 		}
 	}
 

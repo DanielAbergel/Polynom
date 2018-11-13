@@ -82,7 +82,8 @@ public class test {
 		System.out.println(h.toString());
 
 		System.out.println(i.area(-3, 4, 0.0001));///calc the area above the x axis between x=-3 to x=3 with eps= 0.0001.
-
+		
+		
 	}
 
 
