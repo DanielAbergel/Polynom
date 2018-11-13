@@ -296,6 +296,30 @@ public class Polynom implements Polynom_able{
 		return sum;
 	}
 	/**
+	 * this function is calculate the area of polynom between two points by using Riman's integral.
+	 * the function splits the area to ((x1-x0)/eps) rectangles and summing the area of them. 
+	 * @param x0 represent the first position on the x axis.
+	 * @param x1 represent the second position on the x axis
+	 * @return the approximated area below the x-axis, above this Polynom and between the [x0,x1] range.
+	 */
+	public double areaAboveGraphBelowX(double x0, double x1)
+	{
+		double eps=0.01;
+		double numOfslices=Math.abs((x1-x0)/eps);
+		double sum=0;
+		double x=x0;
+		for(int i=0;i<numOfslices;++i)
+		{
+			if(this.f(x)<0)
+
+				sum=sum+this.f(x)*eps;
+			x=x+eps;
+		}
+
+		return Math.abs(sum);
+	}
+
+	/**
 	 * this function is delete all of the zero monoms from the polynom and adding one zero monom in the end.
 	 */
 	public void zero_union()

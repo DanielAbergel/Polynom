@@ -72,7 +72,7 @@ public class Graph extends JFrame {
 		}
 		this.plot = new XYPlot(this.data);
 		this.plot.add(data1);
-//
+
 		getContentPane().add(new InteractivePanel(this.plot));
 
 		LineRenderer lines = new DefaultLineRenderer2D();
