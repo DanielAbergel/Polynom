@@ -167,7 +167,6 @@ class PolynomTest {
 		double RootPositive = actual_Polynom.root(0, 3, 0.001);
 		double RootNegative = actual_Polynom.root(-3, 0, 0.001);
 		RootNegative = Math.abs(RootNegative);
-		System.out.println(RootNegative);
 		assertEquals(RootPositive, RootNegative);
 
 	}
@@ -183,27 +182,28 @@ class PolynomTest {
 
 	@Test
 	void testDerivative() {
-		//		fail("Not yet implemented");
+		actual_Polynom = new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");	
+		actual_Polynom.derivative();
+		excepted_Polynom=new Polynom("12*X^3 - 3*X^2 + 2*X^1");
+		if(!actual_Polynom.equals(excepted_Polynom))
+			fail("Not yet implemented");
 	}
 
 	@Test
 	void testArea() {
-		//		fail("Not yet implemented");
+		actual_Polynom = new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");
+		if(actual_Polynom.area(0, 4, 0.0001)!=556.1711343900323)
+			fail("Not yet implemented");
+
 	}
 
 	@Test
 	void testZero_union() {
-		//		fail("Not yet implemented");
-	}
+		actual_Polynom = new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");
+		excepted_Polynom=new Polynom("0");
 
-	@Test
-	void testIteretor() {
-		//		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		//		fail("Not yet implemented");
+		if(!actual_Polynom.derivative().derivative().derivative().derivative().derivative().equals(excepted_Polynom))
+			fail("Not yet implemented");
 	}
 
 }
