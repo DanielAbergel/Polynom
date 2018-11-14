@@ -118,12 +118,23 @@ class PolynomTest {
 
 	@Test
 	void testRoot() {
-		//		fail("Not yet implemented");
+		actual_Polynom.add(new Monom(1,2));
+		actual_Polynom.add(new Monom(-4,0)); // x^2 -4 ---- >> the roots is -2 / +2
+		double RootPositive = actual_Polynom.root(0, 3, 0.001);
+		double RootNegative = actual_Polynom.root(-3, 0, 0.001);
+		RootNegative = Math.abs(RootNegative);
+		System.out.println(RootNegative);
+		assertEquals(RootPositive, RootNegative);
+		
 	}
 
 	@Test
 	void testCopy() {
-		//		fail("Not yet implemented");
+		Polynom_able returnedPolynom = new Polynom();
+		returnedPolynom = actual_Polynom.copy();
+		boolean ans = returnedPolynom.isZero();
+		if(!ans)fail("Not yet implemented");
+		
 	}
 
 	@Test
