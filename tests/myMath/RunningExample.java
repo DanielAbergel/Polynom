@@ -1,5 +1,5 @@
 package myMath;
-public class test {
+public class RunningExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

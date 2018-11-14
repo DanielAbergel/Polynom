@@ -58,16 +58,18 @@ public class Graph extends JFrame {
 
 		Polynom dev=new Polynom(this.polynon);
 		dev.derivative();
-
+		int count = 0 ; 
 		for (double x = this.startingPoint; x <= this.finishPoint; x+=0.001)
 		{
 			double y =this.polynon.f(x);
 
 			if(dev.f(x-0.001)*dev.f(x+0.001)<0)
 			{
-				System.out.println(this.polynon.f(x));
+				
+				System.out.println("Extreme points number " +count+ ":" + " X value : " + x +" Y value : " + this.polynon.f(x));
 				data1.add(x, y);
 				x+=0.001;
+				count++;
 			}
 		}
 		this.plot = new XYPlot(this.data);
