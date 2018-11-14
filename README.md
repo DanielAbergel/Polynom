@@ -4,22 +4,32 @@
 
 ## descreption
 This project represents monomial, polynomial with many functions and operations
-## Monom class
+### Monom class
 Use a monom from the format of a * x ^ b.
-The class monom supports some functions as add, derivative, f (x), multiply, is equal and is zero.
-## Polynom class
-Use a ploynom from the format of a*x1^b + a*x2^b + .... + a*xn^b.
-The class polynom supports some functions as:
+The class monom supports some functions as
 - add
-- derivative 
+- derivative
 - f(x)
 - multiply
-- subtract
+- is equal
+- is zero
+### Polynom class
+Use a ploynom from the format of a*x1^b + a*x2^b + .... + a*xn^b.
+The class polynom supports some functions as:
+- add - there is two options to add function add Monom/Polynom(useing Polynom_able) . 
+- derivative 
+- f(x)
+- multiply 
+- subtract 
 - root
 - copy area
 - is equal 
 - is zero
-## Sorces
+### Example run
+In the RunningExample class there are examples of Polynom and Monom functions
+,You can run and see the examples
+have fun .
+### Sorces
 Riemann_integral  - https://en.wikipedia.org/wiki/Riemann_integral 
 
 Bisection method - https://en.wikipedia.org/wiki/Bisection_method
