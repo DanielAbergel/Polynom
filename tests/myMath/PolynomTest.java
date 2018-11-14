@@ -14,7 +14,7 @@ class PolynomTest {
 	void setUp() throws Exception 
 	{
 		excepted_Polynom = new Polynom();	
-		actual_Polynom = new Polynom();	;
+		actual_Polynom = new Polynom();	
 	}
 
 	@Test
@@ -41,26 +41,32 @@ class PolynomTest {
 	void testPolynomString() {
 		String ValidInput = "2*x + 9*x^1/9*x + 9*x^0 + 0/x^3 + 4*X^-0 + 9*x^2/-3*x - 9*x - 4";
 		String[] ValidInputArray = ValidInput.split("/");
-		try {
-			for (int i = 0; i < ValidInputArray.length; i++) {
+
+		for (int i = 0; i < ValidInputArray.length; i++) {
+			try 
+			{
 				actual_Polynom = new Polynom(ValidInputArray[i]);
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			fail("Not yet implemented");
+			catch (Exception e) 
+			{
+				fail("Not yet implemented");
+			}
 		}
-	
-		String inValidInput = "2*x^-1 + 9*x^1/9*xx + 9*x^0 + 0/x^3 + 4*X^0 + 9*x^2 + a/-3*Xx - 9*x - 4";
+		String inValidInput = "2*x^-1 + 9*x^1/9*xx + 9*x^0 + 0/x^3 + 4*X^0 + 9*x^2 + a/-3*xa";
 		String[] inValidInputArray = inValidInput.split("/");
-		try {
-			for (int i = 0; i < inValidInputArray.length; i++) {
+
+		for (int i = 0; i < inValidInputArray.length; i++) {
+			try 
+			{
 				actual_Polynom = new Polynom(inValidInputArray[i]);
 				fail("Not yet implemented");
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			
+			catch (Exception e) 
+			{
+
+			}
 		}
+
 	}
 
 	@Test
@@ -76,27 +82,27 @@ class PolynomTest {
 
 	@Test
 	void testAddPolynom_able() {
-	//	fail("Not yet implemented");
+		//	fail("Not yet implemented");
 	}
 
 	@Test
 	void testAddMonom() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testSubstract() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testMultiply() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testEqualsPolynom_able() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
@@ -112,37 +118,37 @@ class PolynomTest {
 
 	@Test
 	void testRoot() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testCopy() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testDerivative() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testArea() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testZero_union() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testIteretor() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testToString() {
-//		fail("Not yet implemented");
+		//		fail("Not yet implemented");
 	}
 
 }
