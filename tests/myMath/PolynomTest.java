@@ -82,18 +82,51 @@ class PolynomTest {
 
 	@Test
 	void testAddPolynom_able() {
-		//	fail("Not yet implemented");
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		Polynom test =new Polynom("3*x^1 + 4");
+		excepted_Polynom=new Polynom("2*x^3 + 6*x^1");
+		actual_Polynom.add(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		test=new Polynom("3*x^4");
+		excepted_Polynom=new Polynom("3*x^4 + 2*x^3 + 3*x^1 - 4");
+		actual_Polynom.add(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");
+		
 	}
 
 	@Test
 	void testAddMonom() {
-		//		fail("Not yet implemented");
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		Monom test =new Monom("3*x^1");
+		excepted_Polynom=new Polynom("2*x^3 + 6*x^1 - 4");	
+		actual_Polynom.add(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		test=new Monom("3*x^4");
+		excepted_Polynom=new Polynom("3*x^4 + 2*x^3 + 3*x^1 - 4");
+		actual_Polynom.add(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");
 	}
 
 	@Test
 	void testSubstract() {
-		//		fail("Not yet implemented");
-	}
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		Polynom test =new Polynom("3*x^1 - 4");
+		excepted_Polynom=new Polynom("2*x^3");	
+		actual_Polynom.substract(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");
+		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
+		test=new Polynom("3*x^4 - 2*x^1");
+		excepted_Polynom=new Polynom("-3*x^4 + 2*x^3 + 5*x^1 - 4");
+		actual_Polynom.substract(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			 fail("Not yet implemented");	}
 
 	@Test
 	void testMultiply() {
