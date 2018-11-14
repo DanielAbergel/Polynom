@@ -87,14 +87,14 @@ class PolynomTest {
 		excepted_Polynom=new Polynom("2*x^3 + 6*x^1");
 		actual_Polynom.add(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");
+			fail("Not yet implemented");
 		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
 		test=new Polynom("3*x^4");
 		excepted_Polynom=new Polynom("3*x^4 + 2*x^3 + 3*x^1 - 4");
 		actual_Polynom.add(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");
-		
+			fail("Not yet implemented");
+
 	}
 
 	@Test
@@ -104,13 +104,13 @@ class PolynomTest {
 		excepted_Polynom=new Polynom("2*x^3 + 6*x^1 - 4");	
 		actual_Polynom.add(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");
+			fail("Not yet implemented");
 		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
 		test=new Monom("3*x^4");
 		excepted_Polynom=new Polynom("3*x^4 + 2*x^3 + 3*x^1 - 4");
 		actual_Polynom.add(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");
+			fail("Not yet implemented");
 	}
 
 	@Test
@@ -120,24 +120,35 @@ class PolynomTest {
 		excepted_Polynom=new Polynom("2*x^3");	
 		actual_Polynom.substract(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");
+			fail("Not yet implemented");
 		actual_Polynom = new Polynom("2*x^3 + 3*x^1 - 4");
 		test=new Polynom("3*x^4 - 2*x^1");
 		excepted_Polynom=new Polynom("-3*x^4 + 2*x^3 + 5*x^1 - 4");
 		actual_Polynom.substract(test);
 		if(!actual_Polynom.equals(excepted_Polynom))
-			 fail("Not yet implemented");	}
+			fail("Not yet implemented");	}
 
 	@Test
 	void testMultiply() {
-		//		fail("Not yet implemented");
+		actual_Polynom = new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");
+		Polynom test =new Polynom("-1*X^2 + 5");
+		excepted_Polynom=new Polynom("-3*X^6 + 1*X^5 + 14*X^4 - 5*X^3 + 10*X^2 - 25");	
+		actual_Polynom.multiply(test);
+		if(!actual_Polynom.equals(excepted_Polynom))
+			fail("Not yet implemented");
+
 	}
 
 	@Test
 	void testEqualsPolynom_able() {
-		//		fail("Not yet implemented");
+		actual_Polynom = new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");	
+		excepted_Polynom=new Polynom("3*X^4 - 1*X^3 + 1*X^2 - 5");	
+		if(!actual_Polynom.equals(excepted_Polynom))
+			fail("Not yet implemented");
+		excepted_Polynom=new Polynom("3*X^4 - 1*X^3 + 1*X^2 + 5");
+		if(actual_Polynom.equals(excepted_Polynom))
+			fail("Not yet implemented");
 	}
-
 	@Test
 	void testIsZero() {
 		actual_Polynom.add(new Monom(0,4));
@@ -158,7 +169,7 @@ class PolynomTest {
 		RootNegative = Math.abs(RootNegative);
 		System.out.println(RootNegative);
 		assertEquals(RootPositive, RootNegative);
-		
+
 	}
 
 	@Test
@@ -167,7 +178,7 @@ class PolynomTest {
 		returnedPolynom = actual_Polynom.copy();
 		boolean ans = returnedPolynom.isZero();
 		if(!ans)fail("Not yet implemented");
-		
+
 	}
 
 	@Test
