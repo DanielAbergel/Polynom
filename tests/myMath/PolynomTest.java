@@ -54,7 +54,6 @@ class PolynomTest {
 		}
 		String inValidInput = "2*x^-1 + 9*x^1/9*xx + 9*x^0 + 0/x^3 + 4*X^0 + 9*x^2 + a/-3*xa";
 		String[] inValidInputArray = inValidInput.split("/");
-
 		for (int i = 0; i < inValidInputArray.length; i++) {
 			try 
 			{
@@ -66,7 +65,15 @@ class PolynomTest {
 
 			}
 		}
-
+		//cheacking toString 
+		excepted_Polynom = new Polynom();
+		excepted_Polynom.add(new Monom(3,2));
+		excepted_Polynom.add(new Monom(-3,3));
+		try {
+			actual_Polynom = new Polynom(excepted_Polynom.toString());}
+		catch (Exception e) {
+			fail("toString test not working well ");
+		};
 	}
 
 	@Test
