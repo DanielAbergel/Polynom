@@ -83,6 +83,8 @@ public class Graph extends JFrame {
 		this.color = new Color(0.0f, 0.3f, 1.0f);
 		this.plot.getPointRenderers(this.data).get(0).setColor(this.color);
 		plot.getLineRenderers(data).get(0).setColor(color);
+     	plot.getPointRenderers(data1).get(0).setValueVisible(true);
+		
 
 	}
 }

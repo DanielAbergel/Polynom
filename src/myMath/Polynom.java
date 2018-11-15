@@ -355,8 +355,9 @@ public class Polynom implements Polynom_able{
 		String ans = "";
 		Iterator<Monom> it= this.monomList.iterator();
 		while(it.hasNext()) {
-			ans += it.next().toString() + " ";
+			ans += it.next().toString() + " + ";
 		}
+		ans = ans.substring(0, ans.length()-2);
 		return ans;
 	}
 
