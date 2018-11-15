@@ -35,9 +35,11 @@ The class polynom supports some functions as:
 - is zero
 ### Example run
 In the RunningExample class there are examples of Polynom and Monom functions
-,You can run and see the examples
+,You can run and see the examples , you can plot a graph 2D with the RunningExampleGraph class(gral jar - there is a link to gral GitHub).
 have fun .
 ### Sorces
+gral plot 2D polynom https://github.com/eseifert/gral.git
+
 Riemann_integral  - https://en.wikipedia.org/wiki/Riemann_integral 
 
 Bisection method - https://en.wikipedia.org/wiki/Bisection_method
