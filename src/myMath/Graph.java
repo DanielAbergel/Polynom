@@ -9,7 +9,16 @@ import de.erichseifert.gral.plots.lines.LineRenderer;
 import de.erichseifert.gral.plots.points.PointRenderer;
 import de.erichseifert.gral.ui.InteractivePanel;
 import myMath.Polynom;
-
+/**
+ * this class is showing a polynom on a graph.
+ * 1.collect data of a polynom.
+ * 2.plotting a polynom on a graph.
+ * 3.plotting a polynom with it's max and min points on a graph.
+ * 
+ * @author Netanel Ben-Isahar 204478150
+ * @author Daniel Abargel 315660712
+ *
+ */
 public class Graph extends JFrame {
 	Polynom polynon;
 	double startingPoint;
@@ -18,6 +27,13 @@ public class Graph extends JFrame {
 	XYPlot plot;
 	Color color;
 
+	/**
+	 * this function collecting data of a polynom.
+	 * 
+	 * @param poly represents the current polynom.
+	 * @param startingPoint represents the starting point of the graph as we want to see. 
+	 * @param finishPoint represents the finish point of the graph as we want to see.
+	 */
 
 	public Graph(Polynom poly,double startingPoint,double finishPoint) {
 		this.polynon=poly;
@@ -38,6 +54,10 @@ public class Graph extends JFrame {
 		this.plot.add(this.data);
 
 	}
+	
+	/**
+	 * this function getting a collection of data of a polynom and plotting it on a graph.
+	 */
 	public void plotting()
 	{
 		this.plot = new XYPlot(this.data);
@@ -51,6 +71,11 @@ public class Graph extends JFrame {
 		this.plot.getPointRenderers(this.data).get(0).setColor(this.color);
 		plot.getLineRenderers(data).get(0).setColor(color);
 	}
+	 /**
+	  * this function getting a collection of data of a polynom and plotting it on a graph.
+	  * also it calculate the max and min points of the polynom and adding it to the graph.
+	  */
+
 	public void extrema()
 	{
 
