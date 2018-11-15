@@ -1,4 +1,9 @@
-package myMath;
+package myMathExamples;
+
+import myMath.Monom;
+import myMath.Polynom;
+import myMath.Polynom_able;
+
 public class RunningExample {
 
 	public static void main(String[] args) {

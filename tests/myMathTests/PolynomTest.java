@@ -1,9 +1,13 @@
-package myMath;
+package myMathTests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import myMath.Monom;
+import myMath.Polynom;
+import myMath.Polynom_able;
 
 class PolynomTest {
 

@@ -1,5 +1,7 @@
-package myMath;
+package myMathExamples;
 
+import myMath.Graph;
+import myMath.Polynom;
 
 public class RunningExampleGraph {
 
