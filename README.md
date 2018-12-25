@@ -1,9 +1,19 @@
 
 
-# Polynom
+# Polynom![aaaaaa](https://user-images.githubusercontent.com/44754325/50425241-2cf89900-087b-11e9-867e-e08dd8eb3253.jpg)
 
 ## descreption
-This project represents monomial, polynomial with many functions and operations
+The project represents a polynomial of the form
+```
+   a*x1^b + a*x2^b + .... + a*xn^b
+   a -> incomplete number
+   b -> Integer  
+```
+ After creating a polynomial, many actions can be done which will be detailed later as part of the project.
+The polynomial can be viewed graphically using OpenSource (gral).
+Attached Image .
+#### Polynom Graphically displayed
+![a](https://user-images.githubusercontent.com/44754325/50425276-adb79500-087b-11e9-80cf-c1a4b29ace8b.png)
 ### Monom class
 Use a monom from the format of a*x^b.
 ```
@@ -29,14 +39,16 @@ The class polynom supports some functions as:
 - f(x)
 - multiply 
 - subtract 
-- root
-- copy area
+- root - Finds the point of intersection of the polynomial in the given range
+- area - Returns the value of the area in the given range
+- copy
 - is equal 
 - is zero
 ### Example run
 In the RunningExample class there are examples of Polynom and Monom functions
 ,You can run and see the examples , you can plot a graph 2D with the RunningExampleGraph class(gral jar - there is a link to gral GitHub).
 have fun .
+
 ### Sorces
 gral plot 2D polynom https://github.com/eseifert/gral.git
 
