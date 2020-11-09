@@ -49,7 +49,7 @@ In the RunningExample class there are examples of Polynom and Monom functions
 ,You can run and see the examples , you can plot a graph 2D with the RunningExampleGraph class(gral jar - there is a link to gral GitHub).
 have fun .
 
-### Sorces
+### Sources
 gral plot 2D polynom https://github.com/eseifert/gral.git
 
 Riemann_integral  - https://en.wikipedia.org/wiki/Riemann_integral 
